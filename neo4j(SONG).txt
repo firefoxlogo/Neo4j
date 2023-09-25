@@ -10,6 +10,7 @@ MATCH (song:Song{title:"Bekhayali"}) MATCH (song_author:Song_author{name:"Rajesh
 
 MATCH (song:Song{title:"Bekhayali"}) MATCH (studio:RecordingStudio{name:"T-series"}) MATCH (company:RecordingCompany{name:"LALA"}) CREATE (song)-[:Recording_in]->(studio) CREATE (studio)-[:Managed_by]-> (company)
 
+MATCH (company:RecordingCompany{name:"LALA"}) MATCH (song:Song{title:"Bekhayali"}) CREATE (company)-[:Finance]->(song)
 
 
 
