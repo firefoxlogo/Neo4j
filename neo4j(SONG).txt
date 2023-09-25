@@ -1,0 +1,15 @@
+CREATE (artist :Artist{name:"Arjit"})
+
+CREATE (song:Song{title:"Bekhayali"})
+
+CREATE(song_author:Song_author{name:"Rajesh"})
+
+MATCH (artist:Artist{name:"Arjit"}) MATCH (song:Song{title:"Bekhayali"}) CREATE (artist)-[:Performs]->(song)
+
+MATCH (song:Song{title:"Bekhayali"}) MATCH (song_author:Song_author{name:"Rajesh"}) CREATE (song)-[:Written_By]->(song_author)
+
+MATCH (song:Song{title:"Bekhayali"}) MATCH (studio:RecordingStudio{name:"T-series"}) MATCH (company:RecordingCompany{name:"LALA"}) CREATE (song)-[:Recording_in]->(studio) CREATE (studio)-[:Managed_by]-> (company)
+
+
+
+
