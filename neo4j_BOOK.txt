@@ -10,12 +10,10 @@ CREATE (A2:Author{name:"Graham Greene",born:"02-10-1904",dead:"02-04-1991"})
 
 MATCH (A:Author{name:"john le calre",born:"19-10-1932"}) MATCH (B:Book{title:"thinker,solidier,spy",published:"1974"}) CREATE(A)-[:WROTE]->(B)
 
-CREATE (A2:Author{name:"Graham Greene",born:"02-10-1904",dead:"02-04-1991"})
-
 MATCH (A2:Author{name:"Graham Greene",born:"02-10-1904",dead:"02-04-1991"}) MATCH (B:Book) create (A2)-[:Wrote]->(B)
 
-MATCH (R:Reader{name:"Alan"}) MATch (B:Book) create (R)-[:Recommeneded{date:05-07-2011}]->(B)
+MATCH (R:Reader{name:"Alan"}) MATch (B:Book) create (R)-[:Recommeneded{date:5-7-2011}]->(B)
 
-MATCH (R:Reader{name:"lan"}) MATch (B:Book) Create (R)-[:Recommeneded{date:03-02-2011}]->(B)
+MATCH (R:Reader{name:"lan"}) MATch (B:Book) Create (R)-[:Recommeneded{date:3-2-2011}]->(B)
 
 
