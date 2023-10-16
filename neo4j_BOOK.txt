@@ -17,3 +17,9 @@ MATCH (R:Reader{name:"Alan"}) MATch (B:Book) create (R)-[:Recommeneded{date:5-7-
 MATCH (R:Reader{name:"lan"}) MATch (B:Book) Create (R)-[:Recommeneded{date:3-2-2011}]->(B)
 
 
+QUERIES
+
+match (b:book{title:"thinker,soldier,spy"})<-[:Read]-(r:reader) return COUNT (r) As NumberOfReader
+
+
+
